@@ -1,0 +1,6 @@
+[push]
+	default = current
+[core]
+	excludesfile = /home/lukas/.gitignore
+[alias]
+	co = checkout
