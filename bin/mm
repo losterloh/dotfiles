@@ -1,0 +1,10 @@
+#!/bin/bash
+if [ -f Makefile ]; then
+  cmd=$(cat Makefile | sed -n -E 's/^([^\s][^:]*):$/\1/p' | sort | rofi -show window -dmenu)
+  if [[ $cmd != "" ]]; then
+    make $cmd
+  fi
+else
+  echo "No Makefile found in current directory $PWD"
+fi
+

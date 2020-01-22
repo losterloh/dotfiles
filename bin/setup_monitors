@@ -1,0 +1,21 @@
+#!/bin/sh
+# Automatically setup external monitor
+
+xrandr_command="/usr/bin/xrandr"
+sed_command="/bin/sed"
+
+is_hdmi_connected=`DISPLAY=:0 $xrandr_command | $sed_command -n '/HDMI-0 connected/p'`
+
+if [ -n "$is_hdmi_connected" ]; then
+  DISPLAY=:0 $xrandr_command --output HDMI-0 --auto --primary --right-of eDP-1-1
+else
+  DISPLAY=:0 $xrandr_command --output HDMI-0 --off
+fi
+
+is_dp_connected=`DISPLAY=:0 $xrandr_command | $sed_command -n '/DP-1 connected/p'`
+
+if [ -n "$is_dp_connected" ]; then
+  DISPLAY=:0 $xrandr_command --output DP-1 --mode 2560x1440 --right-of HDMI-0
+else
+  DISPLAY=:0 $xrandr_command --output DP-1 --off
+fi
