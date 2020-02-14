@@ -175,9 +175,7 @@ bindsym Mod1+Control+l exec "i3lock -c 000000"
 
 exec --no-startup-id xsetroot -solid "#000000"
 
-#exec --no-startup-id volumeicon
-
-exec --no-startup-id init-ssh
+exec_always --no-startup-id dunst
 
 exec_always --no-startup-id nm-applet
 
@@ -210,11 +208,24 @@ bindsym $mod+p exec (((setxkbmap -query | grep -q \"layout:\\s\+us\") && setxkbm
 workspace 1 output eDP-1-1
 workspace 2 output HDMI-0 primary
 workspace 3 output DP-1 primary
+workspace 4 output DP-1 primary
+workspace 5 output DP-1 primary
+workspace 6 output DP-1 primary
 
 assign [class="jetbrains-idea"] 2
 assign [class="Slack"] 1
-assign [class="Firefox"] 3
+#assign [class="Firefox"] 3
 
 bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+ && pkill -RTMIN+10 i3blocks
 bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%- && pkill -RTMIN+10 i3blocks
 bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle && pkill -RTMIN+10 i3blocks
+
+bindsym $mod+Shift+greater move workspace to output right
+bindsym $mod+Shift+less move workspace to output left
+
+bindsym $mod+greater move container to output right
+bindsym $mod+less move container to output left
+
+for_window [class="Blueman-manager"] floating enable
+
+exec --no-startup-id ~/bin/init-ssh

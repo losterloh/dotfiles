@@ -3,12 +3,15 @@ filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+Plugin 'fatih/vim-go'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'tpope/vim-fireplace'
 Plugin 'elzr/vim-json'
 Plugin 'vim-airline/vim-airline'
 Plugin 'previm/previm'
+Plugin 'klen/python-mode'
+Plugin 'junegunn/fzf.vim'
 call vundle#end()
 
 filetype plugin indent on
@@ -54,3 +57,8 @@ augroup PrevimSettings
 augroup END
 
 set rtp+=~/.fzf
+
+set cc=
+let g:pymode_options_colorcolumn = 0
+"let g:pymode_rope = 1
+set foldmethod=syntax
