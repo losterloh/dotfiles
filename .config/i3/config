@@ -229,3 +229,4 @@ bindsym $mod+less move container to output left
 for_window [class="Blueman-manager"] floating enable
 
 exec --no-startup-id ~/bin/init-ssh
+exec --no-startup-id parcellite
