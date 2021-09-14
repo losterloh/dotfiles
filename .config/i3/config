@@ -183,6 +183,8 @@ exec_always --no-startup-id blueman-applet
 
 exec_always --no-startup-id ~/bin/setup_monitors
 
+exec_always setxkbmap us -option compose:ralt
+
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id i3lock -c 000000, mode "default"
