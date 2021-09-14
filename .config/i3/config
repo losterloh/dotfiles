@@ -222,6 +222,8 @@ bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+ && pkill -R
 bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%- && pkill -RTMIN+10 i3blocks
 bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle && pkill -RTMIN+10 i3blocks
 
+bindsym Print exec flameshot gui
+
 bindsym $mod+Shift+greater move workspace to output right
 bindsym $mod+Shift+less move workspace to output left
 
