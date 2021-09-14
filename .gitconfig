@@ -2,5 +2,12 @@
 	default = current
 [core]
 	excludesfile = /home/lukas/.gitignore
+[color]
+	diff = auto
+[color.diff]
+	newMoved = magenta bold
+	oldMoved = magenta bold
+[diff]
+	colorMoved = plain
 [alias]
 	co = checkout
