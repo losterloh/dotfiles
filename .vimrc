@@ -5,7 +5,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'fatih/vim-go'
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'morhetz/gruvbox'
 Plugin 'tpope/vim-fireplace'
 Plugin 'elzr/vim-json'
 Plugin 'vim-airline/vim-airline'
@@ -24,9 +23,6 @@ set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 set directory=/tmp
 :set ignorecase
 :set smartcase
-set background=dark
-let g:gruvbox_contrast_dark='hard'
-silent colorscheme gruvbox
 set statusline+=%F
 set laststatus=2
 
@@ -62,3 +58,7 @@ set cc=
 let g:pymode_options_colorcolumn = 0
 "let g:pymode_rope = 1
 set foldmethod=syntax
+
+syntax enable
+set background=dark
+colorscheme solarized
