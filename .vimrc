@@ -60,5 +60,5 @@ let g:pymode_options_colorcolumn = 0
 set foldmethod=syntax
 
 syntax enable
-set background=dark
+set background=light
 colorscheme solarized
