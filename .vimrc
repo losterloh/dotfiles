@@ -7,10 +7,11 @@ Plugin 'fatih/vim-go'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fireplace'
 Plugin 'elzr/vim-json'
-Plugin 'vim-airline/vim-airline'
 Plugin 'previm/previm'
 Plugin 'klen/python-mode'
 Plugin 'junegunn/fzf.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 call vundle#end()
 
 filetype plugin indent on
@@ -23,7 +24,6 @@ set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 set directory=/tmp
 :set ignorecase
 :set smartcase
-set statusline+=%F
 set laststatus=2
 
 map <C-k> :Eval (stop)<Enter><Enter>
@@ -60,5 +60,9 @@ let g:pymode_options_colorcolumn = 0
 set foldmethod=syntax
 
 syntax enable
-set background=light
-colorscheme solarized
+set background=dark
+" colorscheme solarized
+
+let &t_ut=''
+
+set re=2
