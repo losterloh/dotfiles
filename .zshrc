@@ -1,23 +1,6 @@
-source ~/etc/antigen/antigen.zsh
+source "$HOME/etc/antidote/antidote.zsh"
 
-antigen use oh-my-zsh
-
-antigen bundle git
-antigen bundle heroku
-antigen bundle pip
-antigen bundle command-not-found
-
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle zsh-users/zsh-history-substring-search
-
-antigen bundle jocelynmallon/zshmarks
-
-antigen bundle kiurchv/asdf.plugin.zsh
-
-antigen theme robbyrussell
-
-antigen apply
+antidote load ${ZDOTDIR:-$HOME}/.zsh_plugins.txt
 
 alias json-pretty="python -m json.tool"
 alias glm="git checkout master && git pull && git checkout -"
@@ -63,7 +46,7 @@ pastefinish() {
 zstyle :bracketed-paste-magic paste-init pasteinit
 zstyle :bracketed-paste-magic paste-finish pastefinish
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
 
 alias G="jump"
 alias S="bookmark"
