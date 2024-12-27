@@ -1,0 +1,10 @@
+keybind = super+j=jump_to_prompt:-1
+keybind = super+shift+j=jump_to_prompt:1
+
+macos-non-native-fullscreen = true
+macos-titlebar-style = tabs
+window-save-state = never
+
+font-size = 16
+
+theme = catppuccin-latte

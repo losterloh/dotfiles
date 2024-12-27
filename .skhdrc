@@ -1,6 +1,7 @@
 # Thanks to https://cbrgm.net/post/2021-05-5-setup-macos/
 
-cmd + alt - return : open -n /Applications/kitty.app
+#cmd + alt - return : open -n /Applications/kitty.app
+cmd + alt - return : open -n /Applications/ghostty.app
 
 alt + shift - r : \
     launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"; \
@@ -80,7 +81,7 @@ alt - s : yabai -m space --layout float
 alt + shift - space : yabai -m window --toggle float
 
 # make floating window fill screen
-alt + cmd - up     : yabai -m window --grid 1:1:0:0:1:1
+alt + ctrl - up     : yabai -m window --grid 1:1:0:0:1:1
 
 # make floating window fill left-half of screen
 alt + cmd + shift - left   : yabai -m window --grid 1:2:0:0:1:1
@@ -129,5 +130,5 @@ alt + ctrl - 1  : yabai -m display --focus 1
 alt + ctrl - 2  : yabai -m display --focus 2
 alt + ctrl - 3  : yabai -m display --focus 3
 
-ctrl + shift - c : /Users/lukas/etc/switch_colorscheme.sh
-ctrl + shift - x : /Users/lukas/etc/switch_keyboard.sh
+ctrl + shift - c : ~/etc/switch_colorscheme.sh
+ctrl + shift - x : ~/etc/switch_keyboard.sh
