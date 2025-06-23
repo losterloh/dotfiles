@@ -1,6 +1,4 @@
 # Thanks to https://cbrgm.net/post/2021-05-5-setup-macos/
 
-cmd + alt - return : open -n /Applications/ghostty.app
-
 ctrl + shift - c : ~/etc/switch_colorscheme.sh
 ctrl + shift - x : ~/etc/switch_keyboard.sh
