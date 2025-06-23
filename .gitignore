@@ -6,3 +6,9 @@
 
 *.iml
 .tool-versions
+
+node_modules
+
+.scratch
+
+.vscode

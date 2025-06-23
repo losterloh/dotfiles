@@ -72,3 +72,7 @@ PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 # see https://stackoverflow.com/questions/72163907/unable-to-install-confluent-kafka-fatal-error-librdkafka-rdkafka-h-no-such-f
 export C_INCLUDE_PATH=/opt/homebrew/Cellar/librdkafka/1.9.2/include
 export LIBRARY_PATH=/opt/homebrew/Cellar/librdkafka/1.9.2/lib
+
+function jwt-decode {
+  jq -R 'split(".") | .[0],.[1] | @base64d | fromjson' <<< "$1"
+}
