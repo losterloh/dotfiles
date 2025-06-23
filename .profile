@@ -22,3 +22,4 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 export IBUS_ENABLE_SYNC_MODE=1
+. "$HOME/.cargo/env"

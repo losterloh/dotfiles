@@ -73,6 +73,14 @@ PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 export C_INCLUDE_PATH=/opt/homebrew/Cellar/librdkafka/1.9.2/include
 export LIBRARY_PATH=/opt/homebrew/Cellar/librdkafka/1.9.2/lib
 
+#PATH="/Users/hosterloh/perl5/bin${PATH:+:${PATH}}"; export PATH;
+#PERL5LIB="/Users/hosterloh/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+#PERL_LOCAL_LIB_ROOT="/Users/hosterloh/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+#PERL_MB_OPT="--install_base \"/Users/hosterloh/perl5\""; export PERL_MB_OPT;
+#PERL_MM_OPT="INSTALL_BASE=/Users/hosterloh/perl5"; export PERL_MM_OPT;
+
 function jwt-decode {
   jq -R 'split(".") | .[0],.[1] | @base64d | fromjson' <<< "$1"
 }
+
+. ~/.asdf/plugins/java/set-java-home.zsh
