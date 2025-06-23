@@ -217,3 +217,33 @@ automatically-unhide-macos-hidden-apps = false
     down = 'volume down'
     up = 'volume up'
     shift-down = ['volume set 0', 'mode main']
+
+[[on-window-detected]]
+    if.app-id = 'com.mitchellh.ghostty'
+    check-further-callbacks = true
+    run = 'move-node-to-workspace T'
+
+[[on-window-detected]]
+    if.app-id = 'org.mozilla.firefox'
+    check-further-callbacks = true
+    run = 'move-node-to-workspace B'
+
+[[on-window-detected]]
+    if.app-id = 'com.tinyspeck.slackmacgap'
+    check-further-callbacks = true
+    run = 'move-node-to-workspace S'
+
+[[on-window-detected]]
+    if.app-id = 'com.microsoft.Outlook'
+    check-further-callbacks = true
+    run = 'move-node-to-workspace O'
+
+[[on-window-detected]]
+    if.app-id = 'com.jetbrains.intellij'
+    check-further-callbacks = true
+    run = 'move-node-to-workspace I'
+
+[[on-window-detected]]
+    if.app-id = 'com.microsoft.VSCode'
+    check-further-callbacks = true
+    run = 'move-node-to-workspace V'
