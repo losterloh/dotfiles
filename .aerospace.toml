@@ -143,22 +143,21 @@ automatically-unhide-macos-hidden-apps = true
     alt-2 = 'workspace 2'
     alt-3 = 'workspace 3'
     alt-4 = 'workspace 4'
-    alt-5 = 'workspace 5'
-    alt-6 = 'workspace 6_Browser'
-    alt-7 = 'workspace 7_Communication'
-    alt-8 = 'workspace 8_Coding'
-    alt-9 = 'workspace 9_Terminals'
-
+    alt-5 = 'workspace Teams'
+    alt-6 = 'workspace Browser'
+    alt-7 = 'workspace Communication'
+    alt-8 = 'workspace Coding'
+    alt-9 = 'workspace Terminals'
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
     alt-shift-1 = 'move-node-to-workspace 1'
     alt-shift-2 = 'move-node-to-workspace 2'
     alt-shift-3 = 'move-node-to-workspace 3'
     alt-shift-4 = 'move-node-to-workspace 4'
-    alt-shift-5 = 'move-node-to-workspace 5'
-    alt-shift-6 = 'move-node-to-workspace 6_Browser'
-    alt-shift-7 = 'move-node-to-workspace 7_Communication'
-    alt-shift-8 = 'move-node-to-workspace 8_Coding'
-    alt-shift-9 = 'move-node-to-workspace 9_Terminals'
+    alt-shift-5 = 'move-node-to-workspace Teams'
+    alt-shift-6 = 'move-node-to-workspace Browser'
+    alt-shift-7 = 'move-node-to-workspace Communication'
+    alt-shift-8 = 'move-node-to-workspace Coding'
+    alt-shift-9 = 'move-node-to-workspace Terminals'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
     # alt-tab = 'workspace-back-and-forth'
@@ -192,46 +191,46 @@ automatically-unhide-macos-hidden-apps = true
 [[on-window-detected]]
     if.app-id = 'com.mitchellh.ghostty'
     check-further-callbacks = true
-    run = 'move-node-to-workspace 9_Terminals'
+    run = 'move-node-to-workspace Terminals'
 
 [[on-window-detected]]
     if.app-id = 'org.mozilla.firefox'
     check-further-callbacks = true
-    run = 'move-node-to-workspace 6_Browser'
+    run = 'move-node-to-workspace Browser'
 
 [[on-window-detected]]
     if.app-id = 'com.tinyspeck.slackmacgap'
     check-further-callbacks = true
-    run = 'move-node-to-workspace 7_Communication'
+    run = 'move-node-to-workspace Communication'
 
 [[on-window-detected]]
     if.app-id = 'com.microsoft.Outlook'
     check-further-callbacks = true
-    run = 'move-node-to-workspace 7_Communication'
+    run = 'move-node-to-workspace Communication'
 
 [[on-window-detected]]
     if.app-id = 'com.jetbrains.intellij'
     check-further-callbacks = true
-    run = 'move-node-to-workspace 8_Coding'
+    run = 'move-node-to-workspace Coding'
 
 [[on-window-detected]]
     if.app-id = 'com.microsoft.VSCode'
     check-further-callbacks = true
-    run = 'move-node-to-workspace 8_Coding'
+    run = 'move-node-to-workspace Coding'
 
 [[on-window-detected]]
     if.app-id = 'com.microsoft.teams2'
     check-further-callbacks = true
     # Want this on the macbook cause that's where the camera is
-    run = 'move-node-to-workspace 9_Terminals'
+    run = 'move-node-to-workspace Teams'
 
 [workspace-to-monitor-force-assignment]
     1 = 'main'
     2 = 'main'
     3 = 'main'
     4 = 'main'
-    5 = 'main'
-    6_Browser = 'main'
-    7_Communication = 'main'
-    8_Coding = 'main'
-    9_Terminals = ['secondary', 'main']
+    Teams = ['secondary', 'main']
+    Browser = 'main'
+    Communication = 'main'
+    Coding = 'main'
+    Terminals = ['secondary', 'main']
