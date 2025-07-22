@@ -97,7 +97,7 @@ automatically-unhide-macos-hidden-apps = true
     # You can uncomment the following lines to open up terminal with alt + enter shortcut
     # (like in i3)
     # This is a workaround, see here: https://github.com/ghostty-org/ghostty/discussions/3563
-    alt-enter = '''exec-and-forget osascript -e '
+    alt-cmd-enter = '''exec-and-forget osascript -e '
     tell application "Ghostty"
         if it is running then
             activate
