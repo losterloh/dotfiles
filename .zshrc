@@ -84,3 +84,7 @@ function jwt-decode {
 }
 
 . ~/.asdf/plugins/java/set-java-home.zsh
+
+. "$HOME/.atuin/bin/env"
+
+eval "$(atuin init zsh)"
