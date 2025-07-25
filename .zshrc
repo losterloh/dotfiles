@@ -71,8 +71,6 @@ function jwt-decode {
   jq -R 'split(".") | .[0],.[1] | @base64d | fromjson' <<< "$1"
 }
 
-. ~/.asdf/plugins/java/set-java-home.zsh
-
 . "$HOME/.atuin/bin/env"
 
 eval "$(atuin init zsh)"
