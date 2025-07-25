@@ -12,3 +12,11 @@ node_modules
 .scratch
 
 .vscode
+
+.DS_Store
+.pyc
+__pycache__
+.venv
+.env
+.vscode
+.gemini

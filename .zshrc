@@ -1,4 +1,4 @@
-source "$HOME/etc/antidote/antidote.zsh"
+source "$HOME/.antidote/antidote.zsh"
 
 antidote load ${ZDOTDIR:-$HOME}/.zsh_plugins.txt
 
@@ -56,8 +56,6 @@ alias L="showmarks"
 
 export PATH="/Users/lukas/.local/bin:$PATH"
 
-alias ac='source $(poetry env info -p)/bin/activate'
-
 # we need this so we can set the prompt when sourcing via direnv, see https://github.com/direnv/direnv/issues/268
 setopt PROMPT_SUBST
 show_virtual_env() {
@@ -69,16 +67,6 @@ PS1='$(show_virtual_env)'$PS1
 
 PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 
-# see https://stackoverflow.com/questions/72163907/unable-to-install-confluent-kafka-fatal-error-librdkafka-rdkafka-h-no-such-f
-export C_INCLUDE_PATH=/opt/homebrew/Cellar/librdkafka/1.9.2/include
-export LIBRARY_PATH=/opt/homebrew/Cellar/librdkafka/1.9.2/lib
-
-#PATH="/Users/hosterloh/perl5/bin${PATH:+:${PATH}}"; export PATH;
-#PERL5LIB="/Users/hosterloh/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-#PERL_LOCAL_LIB_ROOT="/Users/hosterloh/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-#PERL_MB_OPT="--install_base \"/Users/hosterloh/perl5\""; export PERL_MB_OPT;
-#PERL_MM_OPT="INSTALL_BASE=/Users/hosterloh/perl5"; export PERL_MM_OPT;
-
 function jwt-decode {
   jq -R 'split(".") | .[0],.[1] | @base64d | fromjson' <<< "$1"
 }
@@ -88,3 +76,5 @@ function jwt-decode {
 . "$HOME/.atuin/bin/env"
 
 eval "$(atuin init zsh)"
+
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
