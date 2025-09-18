@@ -7,4 +7,4 @@ window-save-state = never
 
 font-size = 16
 
-theme = catppuccin-latte
+theme = "Catppuccin Latte"
