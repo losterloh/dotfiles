@@ -62,18 +62,20 @@ $(brew --prefix)/opt/fzf/install --all --no-bash --no-fish
 
 # Create symlinks for dotfiles
 echo "🔗 Creating symlinks for dotfiles..."
-ln -sf "$(pwd)/.zshrc" ~/.zshrc
-ln -sf "$(pwd)/.zsh_plugins.txt" ~/.zsh_plugins.txt
-ln -sf "$(pwd)/.vimrc" ~/.vimrc
-ln -sf "$(pwd)/.gitconfig" ~/.gitconfig
-ln -sf "$(pwd)/.psqlrc" ~/.psqlrc
-ln -sf "$(pwd)/.profile" ~/.profile
-ln -sf "$(pwd)/.aerospace.toml" ~/.aerospace.toml
-ln -sf "$(pwd)/sketchybar" ~/.config
-
-# Create Ghostty config directory and symlink
+ln -f "$(pwd)/.zshrc" ~/.zshrc
+ln -f "$(pwd)/.zsh_plugins.txt" ~/.zsh_plugins.txt
+ln -f "$(pwd)/.vimrc" ~/.vimrc
 mkdir -p ~/.config/ghostty
-ln -sf "$(pwd)/Library/Application Support/com.mitchellh.ghostty/config" ~/.config/ghostty/config
+ln -f "$(pwd)/.config/ghostty/config" ~/.config/ghostty
+ln -f "$(pwd)/.gitconfig" ~/.gitconfig
+ln -f "$(pwd)/.psqlrc" ~/.psqlrc
+ln -f "$(pwd)/.profile" ~/.profile
+ln -f "$(pwd)/.aerospace.toml" ~/.aerospace.toml
+mkdir -p ~/.config/sketchybar
+ln -f "$(pwd)/.config/sketchybar/sketchybarrc" ~/.config/sketchybar
+ln -sf "$(pwd)/.config/sketchybar/plugins" /Users/losterloh/.config/sketchybar/plugins
+
+brew services start atuin
 
 echo "✨ Installation complete!"
 echo ""

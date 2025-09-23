@@ -25,3 +25,5 @@ export IBUS_ENABLE_SYNC_MODE=1
 . "$HOME/.cargo/env"
 
 . "$HOME/.atuin/bin/env"
+
+. "$HOME/.local/bin/env"

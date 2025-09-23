@@ -1,4 +1,4 @@
-source "$HOME/.antidote/antidote.zsh"
+source "$(brew --prefix)/opt/antidote/share/antidote/antidote.zsh"
 
 antidote load ${ZDOTDIR:-$HOME}/.zsh_plugins.txt
 
@@ -71,8 +71,10 @@ function jwt-decode {
   jq -R 'split(".") | .[0],.[1] | @base64d | fromjson' <<< "$1"
 }
 
-. "$HOME/.atuin/bin/env"
-
 eval "$(atuin init zsh --disable-up-arrow)"
 
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+. "$HOME/.local/bin/env"
