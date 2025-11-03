@@ -20,7 +20,7 @@ fi
 
 # Install command line tools via Homebrew
 echo "🔧 Installing command line tools..."
-brew install fzf direnv asdf atuin jq ripgrep
+brew install fzf direnv asdf atuin jq ripgrep starship
 
 # Install GUI applications via Homebrew Cask
 echo "🖥️  Installing GUI applications..."
