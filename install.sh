@@ -65,15 +65,19 @@ echo "🔗 Creating symlinks for dotfiles..."
 ln -f "$(pwd)/.zshrc" ~/.zshrc
 ln -f "$(pwd)/.zsh_plugins.txt" ~/.zsh_plugins.txt
 ln -f "$(pwd)/.vimrc" ~/.vimrc
+ln -sf "$(pwd)/etc/*" ~/.local/bin
+
+# Create Ghostty config directory and symlink
 mkdir -p ~/.config/ghostty
 ln -f "$(pwd)/.config/ghostty/config" ~/.config/ghostty
 ln -f "$(pwd)/.gitconfig" ~/.gitconfig
 ln -f "$(pwd)/.psqlrc" ~/.psqlrc
 ln -f "$(pwd)/.profile" ~/.profile
 ln -f "$(pwd)/.aerospace.toml" ~/.aerospace.toml
-mkdir -p ~/.config/sketchybar
+mkdir -p ~/.config/sketchybar/plugins
 ln -f "$(pwd)/.config/sketchybar/sketchybarrc" ~/.config/sketchybar
-ln -sf "$(pwd)/.config/sketchybar/plugins" /Users/losterloh/.config/sketchybar/plugins
+ln -sf "$(pwd)/.config/sketchybar/plugins" ~/.config/sketchybar/plugins
+ln -f "$(pwd)/.config/starship.toml" ~/.config
 
 brew services start atuin
 

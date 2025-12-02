@@ -1,7 +1,7 @@
 [push]
 	default = current
 [core]
-	excludesfile = /home/lukas/.gitignore
+	excludesfile = /Users/lukas/.gitignore
 [color]
 	diff = auto
 [color.diff]
@@ -11,3 +11,11 @@
 	colorMoved = plain
 [alias]
 	co = checkout
+[user]
+	name = Lukas Osterloh
+	email = lukas.osterloh@gmail.com
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
